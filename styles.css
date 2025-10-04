@@ -5,8 +5,17 @@
   --white: #FFFFFF;
 }
 
+@font-face {
+  font-family: 'FigTree';
+  src: url('/assets/fonts/Figtree-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900; 
+  font-stretch: 75% 125%; 
+  font-style: normal;
+}
+
 
 body {
+    font-family: 'FigTree', sans-serif;
     margin: 0;
     padding: 0;
     height: 100vh;
@@ -24,9 +33,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border: 1px solid black;
+    box-shadow: 8px 8px;
 }
 
-.post-card img {
+.main-image {
     width: 336px;
     height: 200px;
     border-radius: 10px;
@@ -36,19 +47,54 @@ body {
 .content {
     padding-left: 24px;
     padding-right: 24px;
+    padding-top: 24px;
 }
 
 .category {
     background-color: var(--yellow);
+    border-radius: 3px;
     margin: 0;
-    padding: 0px;
+    width: 82px;
+    height: 29px;
+    font-size: 0.8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.category h3 {
+    font-weight: 800;
+}
+
+.content p {
+    font-weight: 400;
+}
+
+.content h2 {
+    font-weight: 800;
+}
+
+.content h2:hover {
+    color: var(--yellow);
+    cursor: pointer;
+}
+
+.main-text {
+    color: var(--gray-light);
+    font-weight: 100;
 }
 
 .user-info {
     display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 95%;
+    padding-left: 24px;
+    font-weight: 800;
+    font-size: 0.9em;
 }
 
-.user-info img {
-    height: 32px;
-    width: 32px;
+.avatar {
+  width: 32px;
+  height: 32px;
 }
